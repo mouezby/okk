@@ -3,8 +3,7 @@ printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m blackfire
 sudo adduser blackfire sudo
-echo 'blackfire:8426' | sudo chpasswd
-sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
+echo 'blackfire:8426' | sudo chpasswd sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
